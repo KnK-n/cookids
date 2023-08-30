@@ -1,0 +1,38 @@
+{
+  "name": "cookids",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "gen-types": "graphql-codegen --require dotenv/config --config codegen.yml"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.8.1",
+    "@apollo/experimental-nextjs-app-support": "^0.4.1",
+    "@auth0/nextjs-auth0": "^3.1.0",
+    "@graphql-codegen/introspection": "^4.0.0",
+    "@graphql-codegen/typed-document-node": "^5.0.1",
+    "@graphql-codegen/typescript": "^4.0.1",
+    "@graphql-codegen/typescript-operations": "^4.0.1",
+    "@graphql-codegen/typescript-react-apollo": "^3.3.7",
+    "@types/node": "20.5.0",
+    "@types/react": "18.2.20",
+    "@types/react-dom": "18.2.7",
+    "dotenv": "^16.3.1",
+    "eslint": "8.47.0",
+    "eslint-config-next": "13.4.16",
+    "graphql": "^16.8.0",
+    "next": "13.4.16",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "subscriptions-transport-ws": "^0.11.0",
+    "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/client-preset": "4.1.0"
+  }
+}
