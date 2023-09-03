@@ -1,0 +1,14 @@
+overwrite: true
+schema:
+  {
+    ${HASURA_GRAPHQL_ENDPOINTS}:
+      {
+        headers:
+          { "x-hasura-admin-secret": ${HASURA_GRAPHQL_ADMIN_SECRET}},
+      },
+  }
+documents: "src/app/queries/**/*.ts"
+generates:
+  src/app/types/generated/:
+    preset: "client"
+    plugins: ["typescript", "typescript-operations", "typescript-react-apollo"]
