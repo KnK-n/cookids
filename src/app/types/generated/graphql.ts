@@ -17,7 +17,7 @@ export type Scalars = {
   Boolean: { input: boolean; output: boolean; }
   Int: { input: number; output: number; }
   Float: { input: number; output: number; }
-  timestamptz: { input: any; output: any; }
+  timestamp: { input: any; output: any; }
 };
 
 /** Boolean expression to compare columns of type "String". All fields are combined with logical 'AND'. */
@@ -217,24 +217,24 @@ export type Subscription_RootUsers_StreamArgs = {
   where?: InputMaybe<Users_Bool_Exp>;
 };
 
-/** Boolean expression to compare columns of type "timestamptz". All fields are combined with logical 'AND'. */
-export type Timestamptz_Comparison_Exp = {
-  _eq?: InputMaybe<Scalars['timestamptz']['input']>;
-  _gt?: InputMaybe<Scalars['timestamptz']['input']>;
-  _gte?: InputMaybe<Scalars['timestamptz']['input']>;
-  _in?: InputMaybe<Array<Scalars['timestamptz']['input']>>;
+/** Boolean expression to compare columns of type "timestamp". All fields are combined with logical 'AND'. */
+export type Timestamp_Comparison_Exp = {
+  _eq?: InputMaybe<Scalars['timestamp']['input']>;
+  _gt?: InputMaybe<Scalars['timestamp']['input']>;
+  _gte?: InputMaybe<Scalars['timestamp']['input']>;
+  _in?: InputMaybe<Array<Scalars['timestamp']['input']>>;
   _is_null?: InputMaybe<Scalars['Boolean']['input']>;
-  _lt?: InputMaybe<Scalars['timestamptz']['input']>;
-  _lte?: InputMaybe<Scalars['timestamptz']['input']>;
-  _neq?: InputMaybe<Scalars['timestamptz']['input']>;
-  _nin?: InputMaybe<Array<Scalars['timestamptz']['input']>>;
+  _lt?: InputMaybe<Scalars['timestamp']['input']>;
+  _lte?: InputMaybe<Scalars['timestamp']['input']>;
+  _neq?: InputMaybe<Scalars['timestamp']['input']>;
+  _nin?: InputMaybe<Array<Scalars['timestamp']['input']>>;
 };
 
 /** columns and relationships of "users" */
 export type Users = {
   __typename?: 'users';
   id: Scalars['String']['output'];
-  last_seen: Scalars['timestamptz']['output'];
+  last_seen: Scalars['timestamp']['output'];
   name: Scalars['String']['output'];
 };
 
@@ -266,7 +266,7 @@ export type Users_Bool_Exp = {
   _not?: InputMaybe<Users_Bool_Exp>;
   _or?: InputMaybe<Array<Users_Bool_Exp>>;
   id?: InputMaybe<String_Comparison_Exp>;
-  last_seen?: InputMaybe<Timestamptz_Comparison_Exp>;
+  last_seen?: InputMaybe<Timestamp_Comparison_Exp>;
   name?: InputMaybe<String_Comparison_Exp>;
 };
 
@@ -279,7 +279,7 @@ export enum Users_Constraint {
 /** input type for inserting data into table "users" */
 export type Users_Insert_Input = {
   id?: InputMaybe<Scalars['String']['input']>;
-  last_seen?: InputMaybe<Scalars['timestamptz']['input']>;
+  last_seen?: InputMaybe<Scalars['timestamp']['input']>;
   name?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -287,7 +287,7 @@ export type Users_Insert_Input = {
 export type Users_Max_Fields = {
   __typename?: 'users_max_fields';
   id?: Maybe<Scalars['String']['output']>;
-  last_seen?: Maybe<Scalars['timestamptz']['output']>;
+  last_seen?: Maybe<Scalars['timestamp']['output']>;
   name?: Maybe<Scalars['String']['output']>;
 };
 
@@ -295,7 +295,7 @@ export type Users_Max_Fields = {
 export type Users_Min_Fields = {
   __typename?: 'users_min_fields';
   id?: Maybe<Scalars['String']['output']>;
-  last_seen?: Maybe<Scalars['timestamptz']['output']>;
+  last_seen?: Maybe<Scalars['timestamp']['output']>;
   name?: Maybe<Scalars['String']['output']>;
 };
 
@@ -340,7 +340,7 @@ export enum Users_Select_Column {
 /** input type for updating data in table "users" */
 export type Users_Set_Input = {
   id?: InputMaybe<Scalars['String']['input']>;
-  last_seen?: InputMaybe<Scalars['timestamptz']['input']>;
+  last_seen?: InputMaybe<Scalars['timestamp']['input']>;
   name?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -355,7 +355,7 @@ export type Users_Stream_Cursor_Input = {
 /** Initial value of the column from where the streaming should start */
 export type Users_Stream_Cursor_Value_Input = {
   id?: InputMaybe<Scalars['String']['input']>;
-  last_seen?: InputMaybe<Scalars['timestamptz']['input']>;
+  last_seen?: InputMaybe<Scalars['timestamp']['input']>;
   name?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -402,7 +402,7 @@ export type Scalars = {
   Boolean: { input: boolean; output: boolean; }
   Int: { input: number; output: number; }
   Float: { input: number; output: number; }
-  timestamptz: { input: any; output: any; }
+  timestamp: { input: any; output: any; }
 };
 
 /** Boolean expression to compare columns of type "String". All fields are combined with logical 'AND'. */
@@ -602,24 +602,24 @@ export type Subscription_RootUsers_StreamArgs = {
   where?: InputMaybe<Users_Bool_Exp>;
 };
 
-/** Boolean expression to compare columns of type "timestamptz". All fields are combined with logical 'AND'. */
-export type Timestamptz_Comparison_Exp = {
-  _eq?: InputMaybe<Scalars['timestamptz']['input']>;
-  _gt?: InputMaybe<Scalars['timestamptz']['input']>;
-  _gte?: InputMaybe<Scalars['timestamptz']['input']>;
-  _in?: InputMaybe<Array<Scalars['timestamptz']['input']>>;
+/** Boolean expression to compare columns of type "timestamp". All fields are combined with logical 'AND'. */
+export type Timestamp_Comparison_Exp = {
+  _eq?: InputMaybe<Scalars['timestamp']['input']>;
+  _gt?: InputMaybe<Scalars['timestamp']['input']>;
+  _gte?: InputMaybe<Scalars['timestamp']['input']>;
+  _in?: InputMaybe<Array<Scalars['timestamp']['input']>>;
   _is_null?: InputMaybe<Scalars['Boolean']['input']>;
-  _lt?: InputMaybe<Scalars['timestamptz']['input']>;
-  _lte?: InputMaybe<Scalars['timestamptz']['input']>;
-  _neq?: InputMaybe<Scalars['timestamptz']['input']>;
-  _nin?: InputMaybe<Array<Scalars['timestamptz']['input']>>;
+  _lt?: InputMaybe<Scalars['timestamp']['input']>;
+  _lte?: InputMaybe<Scalars['timestamp']['input']>;
+  _neq?: InputMaybe<Scalars['timestamp']['input']>;
+  _nin?: InputMaybe<Array<Scalars['timestamp']['input']>>;
 };
 
 /** columns and relationships of "users" */
 export type Users = {
   __typename?: 'users';
   id: Scalars['String']['output'];
-  last_seen: Scalars['timestamptz']['output'];
+  last_seen: Scalars['timestamp']['output'];
   name: Scalars['String']['output'];
 };
 
@@ -651,7 +651,7 @@ export type Users_Bool_Exp = {
   _not?: InputMaybe<Users_Bool_Exp>;
   _or?: InputMaybe<Array<Users_Bool_Exp>>;
   id?: InputMaybe<String_Comparison_Exp>;
-  last_seen?: InputMaybe<Timestamptz_Comparison_Exp>;
+  last_seen?: InputMaybe<Timestamp_Comparison_Exp>;
   name?: InputMaybe<String_Comparison_Exp>;
 };
 
@@ -664,7 +664,7 @@ export enum Users_Constraint {
 /** input type for inserting data into table "users" */
 export type Users_Insert_Input = {
   id?: InputMaybe<Scalars['String']['input']>;
-  last_seen?: InputMaybe<Scalars['timestamptz']['input']>;
+  last_seen?: InputMaybe<Scalars['timestamp']['input']>;
   name?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -672,7 +672,7 @@ export type Users_Insert_Input = {
 export type Users_Max_Fields = {
   __typename?: 'users_max_fields';
   id?: Maybe<Scalars['String']['output']>;
-  last_seen?: Maybe<Scalars['timestamptz']['output']>;
+  last_seen?: Maybe<Scalars['timestamp']['output']>;
   name?: Maybe<Scalars['String']['output']>;
 };
 
@@ -680,7 +680,7 @@ export type Users_Max_Fields = {
 export type Users_Min_Fields = {
   __typename?: 'users_min_fields';
   id?: Maybe<Scalars['String']['output']>;
-  last_seen?: Maybe<Scalars['timestamptz']['output']>;
+  last_seen?: Maybe<Scalars['timestamp']['output']>;
   name?: Maybe<Scalars['String']['output']>;
 };
 
@@ -725,7 +725,7 @@ export enum Users_Select_Column {
 /** input type for updating data in table "users" */
 export type Users_Set_Input = {
   id?: InputMaybe<Scalars['String']['input']>;
-  last_seen?: InputMaybe<Scalars['timestamptz']['input']>;
+  last_seen?: InputMaybe<Scalars['timestamp']['input']>;
   name?: InputMaybe<Scalars['String']['input']>;
 };
 
@@ -740,7 +740,7 @@ export type Users_Stream_Cursor_Input = {
 /** Initial value of the column from where the streaming should start */
 export type Users_Stream_Cursor_Value_Input = {
   id?: InputMaybe<Scalars['String']['input']>;
-  last_seen?: InputMaybe<Scalars['timestamptz']['input']>;
+  last_seen?: InputMaybe<Scalars['timestamp']['input']>;
   name?: InputMaybe<Scalars['String']['input']>;
 };
 

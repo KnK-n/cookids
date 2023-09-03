@@ -1,7 +1,7 @@
 overwrite: true
 schema:
   {
-    ${HASURA_URL}:
+    ${HASURA_GRAPHQL_ENDPOINTS}:
       {
         headers:
           { "x-hasura-admin-secret": ${HASURA_GRAPHQL_ADMIN_SECRET}},
