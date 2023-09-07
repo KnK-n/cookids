@@ -1,5 +1,7 @@
 "use client";
 import { useUser } from "@auth0/nextjs-auth0/client";
+import { Header } from "./header/header";
+import { LogedInHeader } from "./header/logedInHeader";
 
 export default function UserComponent() {
   const { user, error, isLoading } = useUser();
@@ -10,10 +12,15 @@ export default function UserComponent() {
   if (user) {
     return (
       <div>
+        <LogedInHeader />
         Welcome {user.name}! <a href="/api/auth/logout">Logout</a>
       </div>
     );
   }
-
-  return <a href="/api/auth/login">Login</a>;
+  return (
+    <>
+      <Header />
+      <a href="/api/auth/login">Login</a>
+    </>
+  );
 }
