@@ -1,9 +1,9 @@
-import UserComponent from "./components/user";
+import { Header } from "./components/layout/header";
 
 export default function Home() {
   return (
     <main>
-      <UserComponent />
+      <Header />
     </main>
   );
 }
