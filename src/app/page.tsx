@@ -1,10 +1,9 @@
-import UserComponent from "./components/user";
-import styles from "./page.module.css";
+import { Header } from "./components/layout/header";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <UserComponent />
+    <main>
+      <Header />
     </main>
   );
 }
