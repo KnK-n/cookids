@@ -1,6 +1,5 @@
-"use client"; // クライアントコンポーネントであることをNext.jsに伝える
-
-import { ApolloClient, ApolloLink, HttpLink } from "@apollo/client";
+"use client";
+import { ApolloLink, HttpLink } from "@apollo/client";
 import {
   ApolloNextAppProvider,
   NextSSRApolloClient,
@@ -10,8 +9,7 @@ import {
 
 function makeClient() {
   const httpLink = new HttpLink({
-    // https://studio.apollographql.com/public/spacex-l4uc6p/
-    uri: "https://glorious-bluegill-24.hasura.app/v1/graphql",
+    uri: process.env.HASURA_GRAPHQL_ENDPOINTS,
   });
 
   return new NextSSRApolloClient({
@@ -29,9 +27,5 @@ function makeClient() {
 }
 
 export function ApolloWrapper({ children }: React.PropsWithChildren) {
-  return (
-    <ApolloNextAppProvider makeClient={makeClient}>
-      {children}
-    </ApolloNextAppProvider>
-  );
+  return <ApolloNextAppProvider makeClient={makeClient}>{children}</ApolloNextAppProvider>;
 }
