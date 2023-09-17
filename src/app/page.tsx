@@ -1,5 +1,5 @@
 import { Header } from "./components/layout/header";
-import { Recipe } from "./components/recipe";
+import { Recipe } from "./components/recipes";
 
 export default function Home() {
   return (
