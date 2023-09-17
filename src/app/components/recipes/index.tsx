@@ -1,8 +1,8 @@
 "use client";
 
-import { useRecipesQuery } from "@/app/api/recipes/hooks";
+import { recipesList } from "@/app/api/recipes/queryFn";
 
 export const Recipe = () => {
-  const { data: recipesList } = useRecipesQuery();
+  const { data: recipes } = recipesList();
   return <></>;
 };
