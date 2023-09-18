@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 
 import { ApolloWrapper } from "./lib/ApolloWrapper";
 import { ThemeRegistry } from "./components/layout/themeRegistry";
+import { ReactQueryProvider } from "./lib/ReactQueryProvider";
 
 export const metadata: Metadata = {
   title: "Cookids",
@@ -15,7 +16,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <ThemeRegistry>
         <UserProvider>
           <ApolloWrapper>
-            <body>{children}</body>
+            <ReactQueryProvider>
+              <body>{children}</body>
+            </ReactQueryProvider>
           </ApolloWrapper>
         </UserProvider>
       </ThemeRegistry>
